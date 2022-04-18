@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-    #   - "src/**.py"
-    #   - "tests/**.py"
-    #   - "poetry.lock"
+      - "src/**.py"
+      - "tests/**.py"
+      - "poetry.lock"
       - ".github/workflows/lint.yml"
 
 jobs:
