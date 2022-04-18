@@ -4,11 +4,11 @@ on:
   pull_request:
     branches:
       - main
-    # paths:
+    paths:
     #   - "src/**.py"
     #   - "tests/**.py"
     #   - "poetry.lock"
-    #   - ".github/workflows/lint.yml"
+      - ".github/workflows/lint.yml"
 
 jobs:
   lint:
