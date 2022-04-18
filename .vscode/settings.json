@@ -1,0 +1,16 @@
+{
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "${workspaceFolder}/.venv/bin/flake8",
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+  "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+  "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+  "autoDocstring.docstringFormat": "numpy"
+}
