@@ -2,6 +2,34 @@
 
 最近、Python の新しいプロジェクトを立ち上げる度に毎回同じような設定をコピペしていたので、テンプレートを用意しとこうと思った次第です。
 
+- [Python Project Template](#python-project-template)
+  - [採用技術](#採用技術)
+  - [前提となるツール](#前提となるツール)
+  - [Python バージョン管理](#python-バージョン管理)
+    - [pyenv](#pyenv)
+  - [パッケージマネージャー](#パッケージマネージャー)
+    - [poetry](#poetry)
+  - [リンター (linter)](#リンター-linter)
+    - [flake8](#flake8)
+      - [flake8 プラグイン](#flake8-プラグイン)
+    - [mypy](#mypy)
+  - [フォーマッター (formatter)](#フォーマッター-formatter)
+    - [black](#black)
+    - [isort](#isort)
+  - [テスティングフレームワーク](#テスティングフレームワーク)
+    - [pytest](#pytest)
+  - [ドキュメント生成](#ドキュメント生成)
+    - [sphinx](#sphinx)
+  - [タスクランナー](#タスクランナー)
+    - [taskipy](#taskipy)
+  - [Git Hooks](#git-hooks)
+    - [pre-commit](#pre-commit)
+  - [CI/CD](#cicd)
+    - [GitHub Actions](#github-actions)
+  - [VSCode](#vscode)
+    - [settings.json](#settingsjson)
+    - [extensions.json](#extensionsjson)
+
 ## 採用技術
 
 - python 3.10
