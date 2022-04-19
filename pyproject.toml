@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Python Project の Template"
 authors = ["jDBTISK"]
 readme = "README.md"
-repository = ""
+repository = "https://github.com/jDBTISK/python-project-template"
 
 [project]
 name = "python-template"
