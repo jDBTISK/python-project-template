@@ -43,9 +43,9 @@
 - github actions (CI/CD)
 - vscode (エディタ)
 
-パッケージ管理には `pipenv` ではなく `poetry` を採用し、
-ドキュメント生成には `sphinx` を採用し、
-エディタには `vscode` を採用し、
+パッケージ管理には `pipenv` ではなく `poetry` を採用し、  
+ドキュメント生成には `sphinx` を採用し、  
+エディタには `vscode` を採用し、  
 CI/CD は `github actions` でやっちゃってる感じです。
 
 当リポジトリを参考にしてくださる方がいる場合は適時不要な技術に関連する設定ファイルは消しちゃって下さい。
@@ -56,7 +56,7 @@ CI/CD は `github actions` でやっちゃってる感じです。
 - pyenv
 - poetry
 
-この3つはお使いのマシン上で使える状態になっている前提です。
+この3つはお使いのマシン上で使える状態になっている前提です。  
 `pyenv` や `poetry` のインストール方法やコマンドの解説も省略しております。
 
 ## Python バージョン管理
@@ -129,7 +129,7 @@ poetry add -D flake8-isort flake8-bugbear flake8-builtins flake8-eradicate flake
 
 これ以外にもプラグインはたくさんあるので探してみるとお好みのものが見つかるかもしれません。
 
-以下コマンドで `src` ディレクトリ及び `tests` ディレクトリに対して実行出来ます。
+以下コマンドで `src` ディレクトリ及び `tests` ディレクトリに対して実行出来ます。  
 このとき、`flake8` コマンドしか実行していませんが、プラグインを追加している場合はそのプラグインの検査も含まれています。
 
 ```shell
@@ -140,7 +140,7 @@ poetry run flake8 src tests
 
 ### mypy
 
-言わずと知れた、`python` で静的型検査をしてくれるツールです。
+言わずと知れた、`python` で静的型検査をしてくれるツールです。  
 バグの低減はもちろん、`vscode` 上での補完もゴリゴリに効くようになってコーディングが捗ります。
 
 ```shell
@@ -149,7 +149,7 @@ poetry add -D mypy
 
 で開発用パッケージとしてプロジェクトに追加します。
 
-加えて、以下のような設定を `pyproject.toml` に記述しています。
+加えて、以下のような設定を `pyproject.toml` に記述しています。  
 テンプレートリポジトリの方ではコメントを書いてませんが、ここでは解説のため各行にコメントを付け加えています。
 
 ```toml:pyproject.toml
@@ -247,7 +247,7 @@ poetry run isort src tests
 
 ### pytest
 
-たぶんデファクトスタンダードでしょう。
+たぶんデファクトスタンダードでしょう。  
 テストコードを書かない場合は不要です。
 
 ```shell
@@ -273,7 +273,7 @@ poetry run pytest -s -vv --cov=. --cov-report=html
 
 ### sphinx
 
-ドキュメントの生成には `sphinx` を採用してます。
+ドキュメントの生成には `sphinx` を採用してます。  
 `python` のライブラリのドキュメントでよく見かける [こんな見た目のやつ](https://sphinx-rtd-theme.readthedocs.io/en/stable/) です
 
 ```shell
@@ -284,7 +284,7 @@ poetry add -D Sphinx sphinx-rtd-theme sphinx-pyproject
 
 `sphinx-rtd-theme` はテーマを [これ](https://sphinx-rtd-theme.readthedocs.io/en/stable/) にするために、`sphinx-pyproject` は `sphinx` の設定を `pyproject.toml` で一元管理するためにインストールしています。
 
-`pyproject.toml` に以下の記述を追記します。
+`pyproject.toml` に以下の記述を追記します。  
 各パラメータに設定している値は適時修正してください。
 
 ```toml:pyproject.toml
@@ -314,7 +314,7 @@ extensions = [
 ]
 ```
 
-加えて、`docs/source/conf.py` を作成します。
+加えて、`docs/source/conf.py` を作成します。  
 `sphinx-pyproject` を使用していない場合、このファイルに上記の `pyproject.toml` に追記したような内容を書いていかなければいけないんですが、ここでは以下のコードをコピペするだけで OK です。
 
 ```python:docs/source/conf.py
@@ -369,7 +369,7 @@ lint-black = "black --check src tests"
 docs = "sphinx-apidoc -F -o docs/source src && sphinx-build docs/source docs/build"
 ```
 
-実行コマンドは `poetry run task タスク名` です。
+実行コマンドは `poetry run task タスク名` です。  
 これでフォーマッターやリンター、ドキュメント生成等のコマンドをいちいち覚える必要がなくなるので楽です。
 
 ```shell
@@ -399,7 +399,7 @@ poetry add -D pre-commit
 
 で開発用パッケージとしてプロジェクトに追加します。
 
-`.pre-commit-config.yaml` ファイルをプロジェクトのルートに作成します。
+`.pre-commit-config.yaml` ファイルをプロジェクトのルートに作成します。  
 テンプレートリポジトリの方ではコメントを書いてませんが、ここでは解説のためコメントを付け加えています。
 
 ```yml:.pre-commit-config.yaml
