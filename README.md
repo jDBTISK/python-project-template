@@ -1,5 +1,7 @@
 # Python Project Template
 
+[![code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black/) [![imports](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+
 最近、Python の新しいプロジェクトを立ち上げる度に毎回同じような設定をコピペしていたので、テンプレートを用意しとこうと思った次第です。
 
 - [Python Project Template](#python-project-template)
@@ -261,7 +263,7 @@ poetry add -D pytest pytest-mock pytest-cov
 カバレッジ出力を `html` で行うと以下のような形になります。
 
 ```shell
-poetry run pytest -s -vv --cov=. --cov-report=html
+poetry run pytest -s -vv --cov=. --cov-branch --cov-report=html
 ```
 
 ![pytest-cov-1](https://storage.googleapis.com/zenn-user-upload/c34e0735a18a-20220418.png)
@@ -358,7 +360,7 @@ poetry add -D taskipy
 
 ```toml:pyproject.toml
 [tool.taskipy.tasks]
-test = "pytest -s -vv --cov=. --cov-report=html"
+test = "pytest -s -vv --cov=. --cov-branch --cov-report=html"
 fmt = "task fmt-black && task fmt-isort"
 fmt-black = "black src tests"
 fmt-isort = "isort src tests"
